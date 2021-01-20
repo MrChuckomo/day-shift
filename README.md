@@ -2,6 +2,8 @@
 
 Small `python` script to do your day shift 😉
 
+Run this script to keep your PC awake!
+
 # Python environment 
 
 ## Setup using `conda`

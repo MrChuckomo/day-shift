@@ -4,6 +4,10 @@ Small `python` script to do your day shift 😉
 
 Run this script to keep your PC awake!
 
+```bash
+$ python dayshift.py
+```
+
 # Python environment 
 
 ## Setup using `conda`

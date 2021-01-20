@@ -10,6 +10,8 @@ Run this script to keep your PC awake!
 $ python dayshift.py
 ```
 
+Interrupt using `ctrl` + `c`
+
 # Python environment 
 
 ## Setup using `conda`

@@ -7,5 +7,7 @@ Version      : v0.1.0
 Creation Date: 20-Jan-2021
 """
 
-import ctypes
+import keyboard
 
+keyboard.press_and_release('cmd, space')
+# keyboard.press_and_release('shift+s, space')

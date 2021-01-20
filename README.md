@@ -1,8 +1,10 @@
 # day-shift
 
-Small Python script to do your day shift 😉
+Small `python` script to do your day shift 😉
 
-## Setup Python environment using conda
+# Python environment 
+
+## Setup using `conda`
 
 ```bash
 # List you python envs
@@ -20,3 +22,10 @@ $ conda init zsh
 # Activate your new created python env
 $ conda activate ~/Developer/pyenvs/dayshift_env
 ```
+
+# Research 
+
+- [Conda manage environments](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#specifying-a-location-for-an-environment)
+- [Add channel to conda env](https://stackoverflow.com/questions/40616381/can-i-add-a-channel-to-a-specific-conda-environment#41816116)
+- [`keyboard` package pypi](https://pypi.org/project/keyboard/)
+- [`keyboard` package GitHub](https://github.com/boppreh/keyboard)

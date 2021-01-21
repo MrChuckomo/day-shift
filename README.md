@@ -1,6 +1,6 @@
 # day-shift
 
-Small `python` script to do your day shift 😉
+Small `python` script to do your day shift 👇⌨️
 
 Run this script to keep your PC awake!
 

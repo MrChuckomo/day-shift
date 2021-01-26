@@ -6,4 +6,6 @@ dependencies:
     - python=3.8.5
     - pip
     - pip:
+        - Gooey # https://pypi.org/project/Gooey/
         - keyboard==0.13.5 # https://pypi.org/project/keyboard/
+        - pyinstaller # https://pypi.org/project/pyinstaller/

@@ -19,7 +19,7 @@ Interrupt using `ctrl` + `c`
 ```bash
 # List you python envs
 $ conda info --envs
-$ conda envs list
+$ conda env list
 
 # Create new python envs
 $ conda env create --prefix ~/Developer/pyenvs/dayshift_env --file requirements.txt

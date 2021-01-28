@@ -7,7 +7,11 @@ Run this script to keep your PC awake!
 # Usage
 
 ```bash
-$ python dayshift.py
+# Run in window mode with @Gooey set
+$ pythonw dayshift.py
+
+# Run in cli mode without @Gooey set
+$ python dayshift.py 
 ```
 
 Interrupt using `ctrl` + `c`
@@ -40,3 +44,4 @@ $ conda activate ./ops/pyenv/dayshift_env
 - [`keyboard` package pypi](https://pypi.org/project/keyboard/)
 - [`keyboard` package GitHub](https://github.com/boppreh/keyboard)
 - [Gooey](https://github.com/chriskiehl/Gooey)
+- [argparse](https://docs.python.org/3/library/argparse.html)

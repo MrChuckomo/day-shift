@@ -15,8 +15,10 @@ from gooey import GooeyParser
 # ---------------------------------------------------------------------------------------------------------------------
 
 @Gooey(
-    program_name='DayShift', 
-    optional_cols=1, 
+    program_name='DayShift',
+    show_stop_warning=False,
+    force_stop_is_error=False,
+    optional_cols=1,
     progress_regex=r"^progress: (?P<current>\d+)/(?P<total>\d+)$",
     progress_expr="current / total * 100")
 def main():
@@ -57,7 +59,7 @@ def main():
         time.sleep(args.sleep_time)
 
         keyboard.press_and_release(args.key)
-        print(f'press {args.key}')
+        print(f'press [{args.key}]')
         print(f'progress: {i}/100')
 
 

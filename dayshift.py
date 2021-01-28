@@ -67,7 +67,7 @@ def main():
     timer_group.add_argument(
         '--timer',
         metavar='Exit Timer',
-        default=None,
+        default=100,
         type=int,
         help='Time after which this tool should stop',
         widget='IntegerField'
@@ -76,7 +76,7 @@ def main():
         '--format',
         metavar='Time Format',
         choices=['Second(s)', 'Minute(s)', 'Hour(s)'],
-        default='Minute(s)',
+        default='Hour(s)',
         help='Slect the time format'
     )
 
@@ -87,7 +87,9 @@ def main():
     start = time.time()
     elapsed_time = 0.0
     
-    if args.format == 'Minute(s)':
+    if args.timer == 0:
+        exit_time = 100 * 60 * 60 # set default to 100 h
+    elif args.format == 'Minute(s)':
         exit_time = args.timer * 60
     elif args.format == 'Hour(s)':
         exit_time = args.timer * 60 * 60

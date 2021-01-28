@@ -17,6 +17,7 @@ from gooey import GooeyParser
 @Gooey(
     program_name='DayShift',
     show_stop_warning=False,
+    show_success_modal=False,
     force_stop_is_error=False,
     optional_cols=2,
     progress_regex=r"^progress: (?P<current>\d+)/(?P<total>\d+)$",
@@ -83,14 +84,29 @@ def main():
     args = parser.parse_args()
     print(f'Run with set args: {args}')
 
-    for i in range(100):
+    start = time.time()
+    elapsed_time = 0.0
+    
+    if args.format == 'Minute(s)':
+        exit_time = args.timer * 60
+    elif args.format == 'Hour(s)':
+        exit_time = args.timer * 60 * 60
+    else:
+        exit_time = args.timer
+
+    # for i in range(100):
     # while True:
+    while elapsed_time <= exit_time:
+        keyboard.press_and_release(args.key)
         time.sleep(args.sleep_time)
 
-        keyboard.press_and_release(args.key)
-        print(f'press [{args.key}]')
-        print(f'progress: {i}/100')
+        end = time.time()
+        elapsed_time = round(end - start, 2)
 
+        print(f'press [{args.key}]', f'time: {elapsed_time} sec.')
+        # print(f'progress: {i}/100')
+
+    print('Done')
 
 if __name__ == "__main__":
     main()

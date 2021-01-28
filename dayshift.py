@@ -10,12 +10,20 @@ Creation Date: 20-Jan-2021
 import time
 import keyboard
 
+from gooey import Gooey
+
 
 # ---------------------------------------------------------------------------------------------------------------------
 
 key = 'shift'
 
-while True:
+# @Gooey
+def main():
     keyboard.press_and_release(key)
     print(f'press {key}')
-    time.sleep(3)
+    
+
+if __name__ == "__main__":
+    while True:
+        main()
+        time.sleep(3)    

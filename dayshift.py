@@ -20,13 +20,12 @@ from gooey import GooeyParser
     progress_regex=r"^progress: (?P<current>\d+)/(?P<total>\d+)$",
     progress_expr="current / total * 100")
 def main():
-    # parser = argparse.ArgumentParser(description='Configure your dayshift!')
     parser = GooeyParser(description='Configure your dayshift!')
     parser.add_argument(
         '--key',
         metavar='Key',
-        choices=['shift', 'ctrl', 'space'],
-        default='shift',
+        choices=['SHIFT', 'CTRL', 'SPACE'],
+        default='SHIFT',
         help='A key you want to send'
     )
     parser.add_argument(

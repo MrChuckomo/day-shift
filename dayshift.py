@@ -18,7 +18,7 @@ from gooey import GooeyParser
     program_name='DayShift',
     show_stop_warning=False,
     force_stop_is_error=False,
-    optional_cols=1,
+    optional_cols=2,
     progress_regex=r"^progress: (?P<current>\d+)/(?P<total>\d+)$",
     progress_expr="current / total * 100",
     menu=[{'name': 'Help', 'items': [
@@ -59,17 +59,26 @@ def main():
         widget='IntegerField'
         # widget='Slider'
     )
-    parser.add_argument(
+    timer_group = parser.add_argument_group(
+        "Timer Options",
+        "Customize the exit timer"
+    )
+    timer_group.add_argument(
         '--timer',
         metavar='Exit Timer',
-        # type=int,
-        # type=str,
-        # choices=range(1000),
         default=None,
+        type=int,
         help='Time after which this tool should stop',
-        # widget='TimeChooser'
-        # widget='Slider'
+        widget='IntegerField'
     )
+    timer_group.add_argument(
+        '--format',
+        metavar='Time Format',
+        choices=['Second(s)', 'Minute(s)', 'Hour(s)'],
+        default='Minute(s)',
+        help='Slect the time format'
+    )
+
 
     args = parser.parse_args()
     print(f'Run with set args: {args}')

@@ -39,3 +39,4 @@ $ conda activate ./ops/pyenv/dayshift_env
 - [Add channel to conda env](https://stackoverflow.com/questions/40616381/can-i-add-a-channel-to-a-specific-conda-environment#41816116)
 - [`keyboard` package pypi](https://pypi.org/project/keyboard/)
 - [`keyboard` package GitHub](https://github.com/boppreh/keyboard)
+- [Gooey](https://github.com/chriskiehl/Gooey)

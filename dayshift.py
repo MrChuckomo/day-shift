@@ -14,7 +14,11 @@ from gooey import GooeyParser
 
 # ---------------------------------------------------------------------------------------------------------------------
 
-@Gooey(program_name='DayShift')
+@Gooey(
+    program_name='DayShift', 
+    optional_cols=1, 
+    progress_regex=r"^progress: (?P<current>\d+)/(?P<total>\d+)$",
+    progress_expr="current / total * 100")
 def main():
     # parser = argparse.ArgumentParser(description='Configure your dayshift!')
     parser = GooeyParser(description='Configure your dayshift!')
@@ -49,11 +53,13 @@ def main():
     args = parser.parse_args()
     print(f'Run with set args: {args}')
 
-    while True:
+    for i in range(100):
+    # while True:
         time.sleep(args.sleep_time)
 
         keyboard.press_and_release(args.key)
         print(f'press {args.key}')
+        print(f'progress: {i}/100')
 
 
 if __name__ == "__main__":

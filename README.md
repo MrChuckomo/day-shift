@@ -16,6 +16,9 @@ $ python dayshift.py
 
 Interrupt using `ctrl` + `c`
 
+
+![](./ops/data/dayshift-config-page.png)
+
 # Python environment 
 
 ## Setup using `conda`

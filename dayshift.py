@@ -20,7 +20,27 @@ from gooey import GooeyParser
     force_stop_is_error=False,
     optional_cols=1,
     progress_regex=r"^progress: (?P<current>\d+)/(?P<total>\d+)$",
-    progress_expr="current / total * 100")
+    progress_expr="current / total * 100",
+    menu=[{'name': 'Help', 'items': [
+        {
+            'type': 'Link',
+            'menuTitle': 'GitHub Respository',
+            'url': 'https://github.com/MrChuckomo/day-shift'
+        },
+        {
+            'type': 'Link',
+            'menuTitle': 'Report an issue',
+            'url': 'https://github.com/MrChuckomo/day-shift/issues'
+        },
+        {
+            'type': 'AboutDialog',
+            'menuTitle': 'About',
+            'description': 'Just a small script to do your day shift!',
+            'version': '1.0.0',
+            'copyright': '2021',
+            'license': 'GPL-3.0'
+        }]
+    }])
 def main():
     parser = GooeyParser(description='Configure your dayshift!')
     parser.add_argument(

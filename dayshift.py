@@ -20,7 +20,7 @@ from gooey import GooeyParser
     show_success_modal=False,
     force_stop_is_error=False,
     optional_cols=2,
-    progress_regex=r"^progress: (?P<current>\d+)/(?P<total>\d+)$",
+    progress_regex=r"^.* progress: (?P<current>\d+)/(?P<total>\d+)$",
     progress_expr="current / total * 100",
     menu=[{'name': 'Help', 'items': [
         {
@@ -105,8 +105,15 @@ def main():
         end = time.time()
         elapsed_time = round(end - start, 2)
 
-        print(f'press [{args.key}]', f'time: {elapsed_time} sec.')
+        print(
+            f'press [{args.key}]', 
+            # f'time: {elapsed_time} sec.',
+            f'progress: {int(elapsed_time)}/{exit_time}',
+            sep=' - '
+        )
         # print(f'progress: {i}/100')
+        # print(f'progress: {int(elapsed_time)}/{exit_time}')
+
 
     print('Done')
 

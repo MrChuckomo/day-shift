@@ -22,15 +22,15 @@ $ conda info --envs
 $ conda env list
 
 # Create new python envs
-$ conda env create --prefix ~/Developer/pyenvs/dayshift_env --file requirements.txt
-$ conda env create --prefix ~/Developer/pyenvs/dayshift_env --file environment.yml
+$ conda env create --prefix ./ops/pyenv/dayshift_env --file environment.yml
+$ conda env create --prefix ./ops/pyenv/dayshift_env --file requirements.txt
 
 # Init you shell to use conda activate
 $ conda init
 $ conda init zsh
 
 # Activate your new created python env
-$ conda activate ~/Developer/pyenvs/dayshift_env
+$ conda activate ./ops/pyenv/dayshift_env
 ```
 
 # Research 

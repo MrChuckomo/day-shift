@@ -13,8 +13,6 @@ from gooey import Gooey
 
 # ---------------------------------------------------------------------------------------------------------------------
 
-key = 'shift'
-
 @Gooey
 def main():
     parser = argparse.ArgumentParser(description='Setup your daysift!')
@@ -24,14 +22,21 @@ def main():
         default='shift',
         help='A key you want to send'
     )
+    parser.add_argument(
+        '--time',
+        type=int,
+        default=3,
+        help='Set a pause time in sec.'
+    )
 
-    print(parser.parse_args())
+    args = parser.parse_args()
+    print(f'Run with set args: {args}')
 
     while True:
-        time.sleep(3)
+        time.sleep(args.time)
 
-        keyboard.press_and_release(key)
-        print(f'press {key}')
+        keyboard.press_and_release(args.key)
+        print(f'press {args.key}')
 
 
 if __name__ == "__main__":
